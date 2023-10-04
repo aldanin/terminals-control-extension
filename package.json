@@ -8,7 +8,7 @@
   "publisher": "AlonDanin",
   "description": "",
   "version": "0.8.0",
-  "icon": "resources/launch-icon-14.jpg",
+  "icon": "resources/png-transparent-computer-icons-rocket-launch-rocket.png",
   "engines": {
     "vscode": "^1.82.0"
   },
