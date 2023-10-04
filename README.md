@@ -57,13 +57,4 @@ Currently only Windows console is supported
 
 
 
-## Release Notes
-
-
-
-### 0.1.0
-Initial extension ready
-### 0.2.0
-
-Added README.md
 
