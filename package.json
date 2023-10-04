@@ -4,10 +4,11 @@
     "type": "git",
     "url": "https://github.com/aldanin/terminals-control-extension.git"
   },
-  "displayName": "Alon and Tuni",
-  "publisher": "AlonDanin",
+  "displayName": "Terminals Launcher",
+  "publisher": "Alon Danin",
   "description": "",
   "version": "0.6.0",
+  "icon": "resources/launch-icon-14.jpg",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -32,13 +33,13 @@
           "title": "Reset Before Create",
           "type": "boolean",
           "default": true,
-          "description": "Kill current profiles before creating new ones"
+          "description": "Kill current terminals before creating new ones"
         },
         "terminals-control.createOnStartup": {
-          "title": "Auto-create profiles on startup",
+          "title": "Auto-create terminals on startup",
           "type": "boolean",
           "default": false,
-          "description": "Kill current profiles before creating new ones"
+          "description": "Kill current terminals before creating new ones"
         }
       }
     },
@@ -79,15 +80,15 @@
         },
         {
           "command": "terminals-control.killTerminals",
-          "group": "other"
+          "group": "killing"
         },
         {
           "command": "terminals-control.runAll",
-          "group": "other"
+          "group": "running"
         },
         {
           "command": "terminals-control.abortAll",
-          "group": "other"
+          "group": "running"
         }
       ]
     },
