@@ -1,5 +1,9 @@
 {
   "name": "terminalscontrol",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aldanin/terminals-control-extension.git"
+  },
   "displayName": "Alon and Tuni",
   "publisher": "AlonDanin",
   "description": "",
