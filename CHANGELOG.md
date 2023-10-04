@@ -14,3 +14,5 @@ Added README.md
 ### 0.6.0
 * Added 'Abort" command
 * Updated default key bindings
+### 1.0.0
+Official release
