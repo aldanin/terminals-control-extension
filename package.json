@@ -84,6 +84,10 @@
         {
           "command": "terminals-control.runAll",
           "group": "other"
+        },
+        {
+          "command": "terminals-control.abortAll",
+          "group": "other"
         }
       ]
     },
@@ -103,21 +107,25 @@
       },
       {
         "command": "terminals-control.abortAll",
-        "title": "Stop all running commands"
+        "title": "Stop all registered commands"
       }
     ],
     "keybindings": [
       {
         "command": "terminals-control.createTerminals",
-        "key": "ctrl+alt+F12"
+        "key": "ctrl+alt+NumPad_Add"
       },
       {
         "command": "terminals-control.killTerminals",
-        "key": "ctrl+alt+F11"
+        "key": "ctrl+alt+NumPad_Subtract"
       },
       {
         "command": "terminals-control.runAll",
-        "key": "ctrl+alt+F5"
+        "key": "ctrl+alt+NumPad_Multiply"
+      },
+        {
+        "command": "terminals-control.abortAll",
+        "key": "ctrl+alt+NumPad_Divide"
       }
     ]
   },
