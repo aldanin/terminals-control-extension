@@ -11,3 +11,6 @@ Added README.md
 ### 0.5.1
 * Cleanup
 * Updated this CHANGELOG.md
+### 0.6.0
+* Added 'Abort" command
+* Updated default key bindings
