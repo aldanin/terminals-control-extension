@@ -1,0 +1,140 @@
+{
+  "name": "terminalscontrol",
+  "displayName": "Alon and Tuni",
+  "publisher": "AlonDanin",
+  "description": "",
+  "version": "0.4.0",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Terminals Control",
+      "properties": {
+        "terminals-control.terminals": {
+          "title": "Terminals",
+          "type": "array",
+          "default": false,
+          "description": "Contains user-defined terminal profiles."
+        },
+        "terminals-control.resetBeforeCreate": {
+          "title": "Reset Before Create",
+          "type": "boolean",
+          "default": true,
+          "description": "Kill current profiles before creating new ones"
+        },
+        "terminals-control.createOnStartup": {
+          "title": "Auto-create profiles on startup",
+          "type": "boolean",
+          "default": false,
+          "description": "Kill current profiles before creating new ones"
+        }
+      }
+    },
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "panel-explorer1",
+          "title": "Panel Explorer1",
+          "icon": "$(accounts-view-bar-icon)"
+        }
+      ],
+      "activitybar": [
+        {
+          "id": "package-explorer",
+          "title": "Package Explorer",
+          "icon": "$(breakpoints-activate)"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "terminals-control.submenu",
+        "label": "Terminals Control",
+        "icon": "$(terminal)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "submenu": "terminals-control.submenu",
+          "group": "navigation"
+        }
+      ],
+      "terminals-control.submenu": [
+        {
+          "command": "terminals-control.createTerminals",
+          "group": "creation"
+        },
+        {
+          "command": "terminals-control.killTerminals",
+          "group": "other"
+        },
+        {
+          "command": "terminals-control.runAll",
+          "group": "other"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "terminals-control.createTerminals",
+        "title": "Create Terminals",
+        "icon": "$(breakpoints-activate)"
+      },
+      {
+        "command": "terminals-control.killTerminals",
+        "title": "Reset to Default"
+      },
+      {
+        "command": "terminals-control.runAll",
+        "title": "Run All registered Commands"
+      },
+      {
+        "command": "terminals-control.abortAll",
+        "title": "Stop all running commands"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "terminals-control.createTerminals",
+        "key": "ctrl+alt+F12"
+      },
+      {
+        "command": "terminals-control.killTerminals",
+        "key": "ctrl+alt+F11"
+      },
+      {
+        "command": "terminals-control.runAll",
+        "key": "ctrl+alt+F5"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
