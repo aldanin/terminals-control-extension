@@ -16,3 +16,5 @@ Added README.md
 * Updated default key bindings
 ### 1.0.0
 Official release
+### 1.0.1
+Bettered Abort Running Commands
